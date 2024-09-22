@@ -13,6 +13,7 @@ st.image(image, width=700)
 with open("house_price_prediction.pickle", "rb") as f:
     model = pickle.load(f)
 
+
 # Load column names
 with open("columns.json", "r") as f:
     columns = json.load(f)

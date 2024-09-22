@@ -9,9 +9,11 @@ import sqlite3
 conn = sqlite3.connect('user_credentials.db')
 cursor = conn.cursor()
 
+
 # Create a table to store user credentials if it doesn't exist
 cursor.execute('''CREATE TABLE IF NOT EXISTS users
                 (email TEXT PRIMARY KEY, password TEXT)''')
+
 
 # Placeholder database for storing user credentials
 user_database = {}
@@ -64,6 +66,7 @@ def authenticate(email, password):
     if cursor.fetchone():
         return True
     return False
+
 
 # Login functionality
 def login():
